@@ -1,20 +1,22 @@
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
 # Fast and simple Node.js version manager
 brew "fnm"
-# Extendable version manager for multiple runtimes
-brew "asdf"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
 # GitHub command-line tool
 brew "gh"
+# Search tool like grep and The Silver Searcher
+brew "ripgrep"
 # Terminal multiplexer
 brew "tmux"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # Fish-like fast/unobtrusive autosuggestions for zsh
 brew "zsh-autosuggestions"
 # Additional completion definitions for zsh
 brew "zsh-completions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Smarter cd command that learns your habits
-brew "zoxide"
