@@ -72,11 +72,11 @@ eval "$($BREW_BIN shellenv)"
 echo "Installing apps and tools from Brewfile..."
 run_cmd "$BREW_BIN" bundle --file "$REPO_ROOT/Brewfile"
 
-echo "Configuring Java versions with asdf..."
+echo "Configuring Java versions with mise..."
 if [ "$DRY_RUN" -eq 1 ]; then
-  run_cmd "$REPO_ROOT/scripts/asdf-java-setup.sh" --dry-run
+  run_cmd "$REPO_ROOT/scripts/mise-java-setup.sh" --dry-run
 else
-  run_cmd "$REPO_ROOT/scripts/asdf-java-setup.sh"
+  run_cmd "$REPO_ROOT/scripts/mise-java-setup.sh"
 fi
 
 echo "Creating shell symlinks..."

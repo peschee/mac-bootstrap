@@ -1,5 +1,3 @@
-# Extendable version manager with support for Ruby, Node.js, Erlang & more
-brew "asdf"
 # Fast and simple Node.js version manager
 brew "fnm"
 # Command-line fuzzy finder written in Go
@@ -8,6 +6,10 @@ brew "fzf"
 brew "gemini-cli"
 # GitHub command-line tool
 brew "gh"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Polyglot runtime manager (asdf rust clone)
+brew "mise"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Terminal multiplexer
