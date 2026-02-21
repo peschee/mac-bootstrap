@@ -1,5 +1,7 @@
 # Fast and simple Node.js version manager
 brew "fnm"
+# Extendable version manager for multiple runtimes
+brew "asdf"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Interact with Google Gemini AI models from the command-line

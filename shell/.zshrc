@@ -1,5 +1,15 @@
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
+# asdf (version manager)
+if [ -f /opt/homebrew/opt/asdf/libexec/asdf.sh ]; then
+  . /opt/homebrew/opt/asdf/libexec/asdf.sh
+elif [ -f /usr/local/opt/asdf/libexec/asdf.sh ]; then
+  . /usr/local/opt/asdf/libexec/asdf.sh
+fi
+
+# asdf-java JAVA_HOME integration
+[ -f "$HOME/.asdf/plugins/java/set-java-home.zsh" ] && source "$HOME/.asdf/plugins/java/set-java-home.zsh"
+
 # Initialize Starship prompt
 eval "$(starship init zsh)"
 
