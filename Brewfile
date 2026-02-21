@@ -12,6 +12,8 @@ brew "jq"
 brew "mise"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Text interface for Git repositories
+brew "tig"
 # Terminal multiplexer
 brew "tmux"
 # Shell extension to navigate your filesystem faster
