@@ -1,4 +1,4 @@
-# mac-bootstrap
+# mac-bootstrap 🙂
 
 Minimal macOS setup for this machine: Homebrew packages + shell config + optional local secrets.
 
