@@ -22,3 +22,5 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Replacement for Docker Desktop
+cask "orbstack"
