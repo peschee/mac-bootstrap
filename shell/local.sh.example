@@ -1,0 +1,6 @@
+# Copy the matching local file into your home directory and add sensitive values there.
+# - For zsh: ~/.zshrc.local
+# - For bash: ~/.bashrc.local
+
+# export GITHUB_TOKEN=""
+# export OPENAI_API_KEY=""

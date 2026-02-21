@@ -1,0 +1,7 @@
+.DS_Store
+
+# Local-only shell settings and secrets
+*.local
+.env
+.zshrc.local
+.bashrc.local
