@@ -1,4 +1,4 @@
-# AGENTS.md
+# CLAUDE.md
 
 Agent guidance for this `mac-bootstrap` repo.
 
@@ -6,6 +6,23 @@ Agent guidance for this `mac-bootstrap` repo.
 
 - Purpose: reproducible macOS shell/bootstrap setup using Homebrew + dotfile symlinks.
 - Keep this repo declarative: committed files define the desired machine state.
+
+## Directory structure
+
+```
+├── Brewfile                  # Homebrew package manifest
+├── scripts/
+│   ├── bootstrap.sh          # Main setup orchestrator
+│   ├── symlink.sh            # Dotfile symlink creator
+│   ├── mise-java-setup.sh    # Java versions via mise
+│   └── update-brewfile.sh    # Refresh Brewfile from installed packages
+└── shell/
+    ├── .zshrc                # Main zsh config (symlinked to ~/.zshrc)
+    ├── .bashrc               # Minimal bash config (symlinked to ~/.bashrc)
+    ├── .gitconfig             # Shared git config (symlinked to ~/.gitconfig)
+    ├── aliases.sh            # Shared aliases (symlinked to ~/.aliases.sh)
+    └── local.sh.example      # Template for ~/.zshrc.local secrets
+```
 
 ## Setup commands
 
@@ -25,14 +42,17 @@ Agent guidance for this `mac-bootstrap` repo.
 ## Shell conventions
 
 - `shell/.zshrc` is symlinked to `~/.zshrc` by `scripts/symlink.sh`.
+- `shell/.bashrc` is symlinked to `~/.bashrc`.
+- `shell/.gitconfig` is symlinked to `~/.gitconfig`.
 - `shell/aliases.sh` is symlinked to `~/.aliases.sh` and sourced from `shell/.zshrc`.
 - Prefer idempotent config changes (safe to re-run bootstrap multiple times).
 - For navigation helpers, use `zoxide` init in `shell/.zshrc`; aliases like `j` belong in `shell/aliases.sh`.
+- Key tools initialized in `.zshrc`: mise (version manager), fnm (Node.js), Starship (prompt), fzf, zoxide.
 
 ## Updating dependencies
 
 - After local package changes, refresh and commit the lock-in list:
-  - `brew bundle dump --describe --force --file ~/mac-bootstrap/Brewfile`
+  - `./scripts/update-brewfile.sh` (or manually: `brew bundle dump --describe --force --file ~/mac-bootstrap/Brewfile`)
 - Keep comments in `Brewfile` concise and meaningful.
 
 ## Validation checklist

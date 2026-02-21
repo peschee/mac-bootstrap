@@ -14,6 +14,8 @@ brew "jq"
 brew "mise"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Cross-shell prompt
+brew "starship"
 # Text interface for Git repositories
 brew "tig"
 # Terminal multiplexer
