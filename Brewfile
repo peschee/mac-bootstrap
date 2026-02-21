@@ -14,3 +14,5 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Smarter cd command that learns your habits
+brew "zoxide"
