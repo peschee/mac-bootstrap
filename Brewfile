@@ -1,3 +1,5 @@
+# Search tool like grep, but optimized for programmers
+brew "ack"
 # Fast and simple Node.js version manager
 brew "fnm"
 # Command-line fuzzy finder written in Go
