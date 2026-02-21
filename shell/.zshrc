@@ -19,6 +19,9 @@ autoload -Uz compinit && compinit
 # https://github.com/Schniz/fnm#shell-setup
 eval "$(fnm env --use-on-cd --shell zsh)"
 
+# zoxide
+eval "$(zoxide init zsh)"
+
 # additional completions
 fpath+=("/opt/homebrew/share/zsh-completions")
 

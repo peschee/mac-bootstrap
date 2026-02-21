@@ -88,18 +88,4 @@ if [ ! -f "$HOME/.zshrc.local" ]; then
   fi
 fi
 
-if [ "$DRY_RUN" -eq 1 ]; then
-  if ! grep -Fq 'eval "$(zoxide init zsh)"' "$HOME/.zshrc.local"; then
-    echo "[dry-run] Would append zoxide init to ~/.zshrc.local"
-  fi
-else
-  if ! grep -Fq 'eval "$(zoxide init zsh)"' "$HOME/.zshrc.local"; then
-    {
-      echo ""
-      echo 'eval "$(zoxide init zsh)"'
-    } >>"$HOME/.zshrc.local"
-    echo "Added zoxide init to ~/.zshrc.local"
-  fi
-fi
-
 echo "Done. Restart your shell or run: source ~/.zshrc"
