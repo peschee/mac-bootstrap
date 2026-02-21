@@ -56,5 +56,6 @@ link_file() {
 link_file "$REPO_ROOT/shell/.zshrc" "$HOME/.zshrc"
 link_file "$REPO_ROOT/shell/.bashrc" "$HOME/.bashrc"
 link_file "$REPO_ROOT/shell/aliases.sh" "$HOME/.aliases.sh"
+link_file "$REPO_ROOT/shell/.gitconfig" "$HOME/.gitconfig"
 
 echo "Symlinked shell files from $REPO_ROOT"

@@ -1,0 +1,15 @@
+[user]
+	name = Peter Siska
+	email = 63866+peschee@users.noreply.github.com
+
+[pull]
+	rebase = true
+	autostash = true
+
+[alias]
+	remotes = remote -v
+	st = status
+	tags = tag -l
+	ci = commit
+	co = checkout
+	up = pull --rebase --autostash
