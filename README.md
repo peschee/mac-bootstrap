@@ -20,6 +20,8 @@ chmod +x scripts/*.sh
 ./scripts/bootstrap.sh
 ```
 
+Dry run (no changes): `./scripts/bootstrap.sh --dry-run`
+
 ## Update Brewfile
 
 After installing/removing apps locally, refresh the repo Brewfile:
