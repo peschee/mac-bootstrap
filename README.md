@@ -1,5 +1,7 @@
 # mac-bootstrap 🙂
 
+`🍎 + 🍺 + 🐚 = ready`
+
 Minimal macOS setup for this machine: Homebrew packages + shell config + optional local secrets.
 
 ## What's included
