@@ -59,5 +59,6 @@ link_file "$REPO_ROOT/shell/aliases.sh" "$HOME/.aliases.sh"
 link_file "$REPO_ROOT/shell/.gitconfig" "$HOME/.gitconfig"
 link_file "$REPO_ROOT/shell/.gitignore_global" "$HOME/.gitignore_global"
 link_file "$REPO_ROOT/shell/.vimrc" "$HOME/.vimrc"
+link_file "$REPO_ROOT/shell/.gemrc" "$HOME/.gemrc"
 
 echo "Symlinked shell files from $REPO_ROOT"
