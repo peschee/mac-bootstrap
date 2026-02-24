@@ -29,6 +29,7 @@ eval "$(zoxide init zsh)"
 fpath+=("/opt/homebrew/share/zsh-completions")
 
 # opencode
+export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/.opencode/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
