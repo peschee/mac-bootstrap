@@ -49,6 +49,12 @@ if [ -z "$MISE_BIN" ]; then
     echo "[dry-run] Would run: mise install java@$JAVA_17"
     echo "[dry-run] Would run: mise install java@$JAVA_21"
     echo "[dry-run] Would run: mise use -g java@$JAVA_21"
+    echo "[dry-run] Would run: mise alias set java 21 temurin-21"
+    echo "[dry-run] Would run: mise alias set java 21.0 temurin-21"
+    echo "[dry-run] Would run: mise alias set java 17 temurin-17"
+    echo "[dry-run] Would run: mise alias set java 17.0 temurin-17"
+    echo "[dry-run] Would run: mise alias set java 11 temurin-11"
+    echo "[dry-run] Would run: mise alias set java 11.0 temurin-11"
     exit 0
   fi
 
@@ -61,5 +67,13 @@ run_cmd "$MISE_BIN" install "java@$JAVA_11"
 run_cmd "$MISE_BIN" install "java@$JAVA_17"
 run_cmd "$MISE_BIN" install "java@$JAVA_21"
 run_cmd "$MISE_BIN" use -g "java@$JAVA_21"
+
+# Aliases so bare version requests (e.g. "java 21" in .tool-versions) resolve to temurin
+run_cmd "$MISE_BIN" alias set java 21 temurin-21
+run_cmd "$MISE_BIN" alias set java 21.0 temurin-21
+run_cmd "$MISE_BIN" alias set java 17 temurin-17
+run_cmd "$MISE_BIN" alias set java 17.0 temurin-17
+run_cmd "$MISE_BIN" alias set java 11 temurin-11
+run_cmd "$MISE_BIN" alias set java 11.0 temurin-11
 
 echo "mise Java setup complete."
