@@ -20,6 +20,7 @@ Agent guidance for this `mac-bootstrap` repo.
     ├── .zshrc                # Main zsh config (symlinked to ~/.zshrc)
     ├── .bashrc               # Minimal bash config (symlinked to ~/.bashrc)
     ├── .gitconfig             # Shared git config (symlinked to ~/.gitconfig)
+    ├── .gitignore_global      # Global gitignore (symlinked to ~/.gitignore_global)
     ├── aliases.sh            # Shared aliases (symlinked to ~/.aliases.sh)
     └── local.sh.example      # Template for ~/.zshrc.local secrets
 ```
@@ -28,6 +29,8 @@ Agent guidance for this `mac-bootstrap` repo.
 
 - Full bootstrap: `./scripts/bootstrap.sh`
 - Dry run: `./scripts/bootstrap.sh --dry-run`
+- Nuke & rebuild: `./scripts/bootstrap.sh --nuke`
+- Nuke dry run: `./scripts/bootstrap.sh --nuke --dry-run`
 - Re-link dotfiles only: `./scripts/symlink.sh`
 - Dry-run symlinks: `./scripts/symlink.sh --dry-run`
 
@@ -44,6 +47,7 @@ Agent guidance for this `mac-bootstrap` repo.
 - `shell/.zshrc` is symlinked to `~/.zshrc` by `scripts/symlink.sh`.
 - `shell/.bashrc` is symlinked to `~/.bashrc`.
 - `shell/.gitconfig` is symlinked to `~/.gitconfig`.
+- `shell/.gitignore_global` is symlinked to `~/.gitignore_global` (referenced by `.gitconfig` `core.excludesFile`).
 - `shell/aliases.sh` is symlinked to `~/.aliases.sh` and sourced from `shell/.zshrc`.
 - Prefer idempotent config changes (safe to re-run bootstrap multiple times).
 - For navigation helpers, use `zoxide` init in `shell/.zshrc`; aliases like `j` belong in `shell/aliases.sh`.

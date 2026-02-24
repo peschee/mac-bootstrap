@@ -7,3 +7,6 @@
 .bashrc.local
 
 /.cachebro
+
+# Claude Code
+.claude/

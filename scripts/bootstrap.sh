@@ -5,12 +5,17 @@ set -euo pipefail
 REPO_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 
 DRY_RUN=0
-if [ "${1:-}" = "--dry-run" ] || [ "${1:-}" = "-n" ]; then
-  DRY_RUN=1
-elif [ "${1:-}" != "" ]; then
-  echo "Usage: $0 [--dry-run]"
-  exit 2
-fi
+NUKE=0
+for arg in "$@"; do
+  case "$arg" in
+    --dry-run|-n) DRY_RUN=1 ;;
+    --nuke)       NUKE=1 ;;
+    *)
+      echo "Usage: $0 [--dry-run] [--nuke]"
+      exit 2
+      ;;
+  esac
+done
 
 run_cmd() {
   if [ "$DRY_RUN" -eq 1 ]; then
@@ -38,6 +43,44 @@ find_brew_bin() {
 
   echo ""
 }
+
+nuke_homebrew() {
+  if ! command -v brew >/dev/null 2>&1 \
+     && [ ! -d /opt/homebrew ] \
+     && [ ! -d /usr/local/Homebrew ]; then
+    echo "Homebrew is not installed. Skipping nuke, continuing with bootstrap."
+    return
+  fi
+
+  echo ""
+  echo "WARNING: --nuke will DESTROY your Homebrew installation."
+  echo "This removes ALL formulae, casks, and Homebrew itself."
+  echo "The bootstrap will then reinstall everything from scratch."
+  echo ""
+
+  if [ "$DRY_RUN" -eq 1 ]; then
+    echo '[dry-run] /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"'
+    return
+  fi
+
+  printf "Type YES to confirm: "
+  read -r confirmation
+  if [ "$confirmation" != "YES" ]; then
+    echo "Aborted."
+    exit 1
+  fi
+
+  echo "Removing Homebrew..."
+  NONINTERACTIVE=1 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/uninstall.sh)"
+  hash -r 2>/dev/null || true
+  echo ""
+  echo "Homebrew removed. Continuing with fresh bootstrap..."
+  echo ""
+}
+
+if [ "$NUKE" -eq 1 ]; then
+  nuke_homebrew
+fi
 
 if ! xcode-select -p >/dev/null 2>&1; then
   echo "Xcode Command Line Tools are required. Installing..."
