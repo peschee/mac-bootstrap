@@ -5,3 +5,5 @@
 .env
 .zshrc.local
 .bashrc.local
+
+/.cachebro
