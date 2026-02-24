@@ -45,6 +45,10 @@ Agent guidance for this `mac-bootstrap` repo.
 - Keep machine-specific or secret values in `~/.zshrc.local` (generated from `shell/local.sh.example` if missing).
 - `scripts/bootstrap.sh` should orchestrate setup steps, not become the place for per-tool custom config.
 
+## Script patterns
+
+- `scripts/mise-java-setup.sh` has two dry-run paths that must stay in sync: a manual `echo` fallback (when mise binary isn't found yet) and the `run_cmd` wrapper (normal path). When adding commands, update both blocks.
+
 ## Shell conventions
 
 - `shell/.zshrc` is symlinked to `~/.zshrc` by `scripts/symlink.sh`.
