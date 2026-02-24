@@ -1,3 +1,7 @@
+# Locale — force English in shell regardless of macOS system language
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+
 eval "$(/opt/homebrew/bin/brew shellenv zsh)"
 
 # mise (version manager — sets PATH, JAVA_HOME, etc.)
