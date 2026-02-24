@@ -61,4 +61,7 @@ link_file "$REPO_ROOT/shell/.gitignore_global" "$HOME/.gitignore_global"
 link_file "$REPO_ROOT/shell/.vimrc" "$HOME/.vimrc"
 link_file "$REPO_ROOT/shell/.gemrc" "$HOME/.gemrc"
 
+mkdir -p "$HOME/.config"
+link_file "$REPO_ROOT/shell/starship.toml" "$HOME/.config/starship.toml"
+
 echo "Symlinked shell files from $REPO_ROOT"

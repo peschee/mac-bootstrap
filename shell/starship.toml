@@ -1,0 +1,14 @@
+# Starship prompt configuration
+# Docs: https://starship.rs/config/
+
+[username]
+show_always = true
+format = "[$user]($style)@"
+
+[hostname]
+ssh_only = false
+format = "[$hostname]($style) "
+
+[directory]
+truncation_length = 0
+truncate_to_repo = false
