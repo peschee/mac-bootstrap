@@ -23,6 +23,8 @@ Agent guidance for this `mac-bootstrap` repo.
     ├── .gitignore_global      # Global gitignore (symlinked to ~/.gitignore_global)
     ├── aliases.sh            # Shared aliases (symlinked to ~/.aliases.sh)
     ├── starship.toml         # Starship prompt config (symlinked to ~/.config/starship.toml)
+    ├── .vimrc                # Vim config (symlinked to ~/.vimrc)
+    ├── .gemrc                # Gem config — disables doc installs (symlinked to ~/.gemrc)
     └── local.sh.example      # Template for ~/.zshrc.local secrets
 ```
 
@@ -51,6 +53,8 @@ Agent guidance for this `mac-bootstrap` repo.
 - `shell/.gitignore_global` is symlinked to `~/.gitignore_global` (referenced by `.gitconfig` `core.excludesFile`).
 - `shell/aliases.sh` is symlinked to `~/.aliases.sh` and sourced from `shell/.zshrc`.
 - `shell/starship.toml` is symlinked to `~/.config/starship.toml` (Starship prompt config).
+- `shell/.vimrc` is symlinked to `~/.vimrc`.
+- `shell/.gemrc` is symlinked to `~/.gemrc`.
 - Prefer idempotent config changes (safe to re-run bootstrap multiple times).
 - For navigation helpers, use `zoxide` init in `shell/.zshrc`; aliases like `j` belong in `shell/aliases.sh`.
 - Key tools initialized in `.zshrc`: mise (version manager), fnm (Node.js), Starship (prompt), fzf, zoxide.
