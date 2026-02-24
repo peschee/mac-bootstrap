@@ -7,7 +7,7 @@ Minimal macOS setup for this machine: Homebrew packages + shell config + optiona
 ## What's included
 
 - `Brewfile`: installed Homebrew formulas/casks to recreate this setup.
-- `shell/.zshrc`: base zsh setup (brew, asdf, starship, fzf, fnm, completions).
+- `shell/.zshrc`: base zsh setup (brew, mise, starship, fzf, fnm, completions).
 - `shell/aliases.sh`: shared aliases for zsh/bash.
 - `~/.zshrc.local` or `~/.bashrc.local`: optional local-only secrets/settings (not committed).
 
@@ -22,26 +22,26 @@ chmod +x scripts/*.sh
 
 Dry run (no changes): `./scripts/bootstrap.sh --dry-run`
 
-## Java versions (asdf)
+## Java versions (mise)
 
-Bootstrap configures Java via `asdf` with pinned Temurin LTS versions:
+Bootstrap configures Java via `mise` with pinned Temurin LTS versions:
 
-- `temurin-11.0.30+7`
-- `temurin-17.0.18+8`
-- `temurin-21.0.10+7.0.LTS` (global default)
+- `temurin-11`
+- `temurin-17`
+- `temurin-21` (global default)
 
 Useful commands:
 
 ```bash
-asdf list java
-asdf current java
+mise list java
+mise current java
 java -version
 ```
 
 For a specific project, pin one of the installed versions in that repo:
 
 ```bash
-asdf set java temurin-17.0.18+8
+mise use java@temurin-17
 ```
 
 ## Update Brewfile
