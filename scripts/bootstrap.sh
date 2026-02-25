@@ -130,10 +130,15 @@ else
 fi
 
 echo "Starting Tailscale..."
-run_cmd "$BREW_BIN" services start tailscale
+if run_cmd "$BREW_BIN" services start tailscale 2>/dev/null; then
+  echo "Tailscale service started."
+else
+  echo "Could not start Tailscale service (GUI session required). Start it manually after login:"
+  echo "  brew services start tailscale"
+fi
 if [ -d "/Applications/Tailscale.app" ]; then
   if ! pgrep -q Tailscale; then
-    run_cmd open -a Tailscale
+    run_cmd open -a Tailscale 2>/dev/null || true
     echo "Tailscale launched — sign in from the menu bar icon."
   else
     echo "Tailscale is already running."
