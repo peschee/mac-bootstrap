@@ -14,6 +14,8 @@ brew "gh"
 brew "jq"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# AI coding agent, built for the terminal
+brew "opencode"
 # Fast, disk space efficient package manager for Node.js
 brew "pnpm"
 # Search tool like grep and The Silver Searcher
