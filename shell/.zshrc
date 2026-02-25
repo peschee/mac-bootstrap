@@ -23,8 +23,9 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # enable extended completion
 autoload -Uz compinit && compinit
 
-# case-insensitive tab completion
-zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}' 'm:{A-Z}={a-z}'
+# case-insensitive + substring (fuzzy) tab completion
+# 1) try exact match  2) case-insensitive  3) substring anywhere in name
+zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'l:|=* r:|=*'
 
 # https://github.com/Schniz/fnm#shell-setup
 eval "$(fnm env --use-on-cd --shell zsh)"
