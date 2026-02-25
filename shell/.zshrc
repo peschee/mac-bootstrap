@@ -13,14 +13,11 @@ eval "$(starship init zsh)"
 # enable extended completion
 autoload -Uz compinit && compinit
 
-# case-insensitive + substring (fuzzy) tab completion
-# 1) try exact match  2) case-insensitive  3) substring anywhere in name
-zstyle ':completion:*' matcher-list '' 'm:{a-zA-Z}={A-Za-z}' 'l:|=* r:|=*'
+# case-insensitive + substring tab completion (arrow keys to navigate)
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z} l:|=* r:|=*'
+zstyle ':completion:*' menu select
 
-# fzf-tab — replaces default completion menu with fzf (must be after compinit)
-source /opt/homebrew/share/fzf-tab/fzf-tab.plugin.zsh
-
-# fzf key bindings & completion
+# fzf key bindings & completion (CTRL-T, CTRL-R, ALT-C)
 [ -f /opt/homebrew/opt/fzf/shell/key-bindings.zsh ] && source /opt/homebrew/opt/fzf/shell/key-bindings.zsh
 [ -f /opt/homebrew/opt/fzf/shell/completion.zsh ] && source /opt/homebrew/opt/fzf/shell/completion.zsh
 
