@@ -129,6 +129,18 @@ else
   run_cmd "$REPO_ROOT/scripts/symlink.sh"
 fi
 
+echo "Starting Tailscale..."
+if [ -d "/Applications/Tailscale.app" ]; then
+  if ! pgrep -q Tailscale; then
+    run_cmd open -a Tailscale
+    echo "Tailscale launched — sign in from the menu bar icon."
+  else
+    echo "Tailscale is already running."
+  fi
+else
+  echo "Tailscale.app not found — skipping (install via Brewfile)."
+fi
+
 if [ ! -f "$HOME/.zshrc.local" ]; then
   if [ "$DRY_RUN" -eq 1 ]; then
     echo "[dry-run] Would create ~/.zshrc.local from template."

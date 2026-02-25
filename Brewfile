@@ -36,3 +36,5 @@ brew "zsh-completions"
 brew "zsh-syntax-highlighting"
 # Replacement for Docker Desktop
 cask "orbstack"
+# Mesh VPN based on WireGuard
+cask "tailscale"
