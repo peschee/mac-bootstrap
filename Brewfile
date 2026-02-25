@@ -4,6 +4,8 @@ brew "ack"
 brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Replace zsh's default completion selection menu with fzf
+brew "fzf-tab"
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
 # GitHub command-line tool
@@ -12,6 +14,8 @@ brew "gh"
 brew "jq"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Fast, disk space efficient package manager for Node.js
+brew "pnpm"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Cross-shell prompt
