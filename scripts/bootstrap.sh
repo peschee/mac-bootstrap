@@ -130,6 +130,7 @@ else
 fi
 
 echo "Starting Tailscale..."
+run_cmd "$BREW_BIN" services start tailscale
 if [ -d "/Applications/Tailscale.app" ]; then
   if ! pgrep -q Tailscale; then
     run_cmd open -a Tailscale
@@ -137,8 +138,6 @@ if [ -d "/Applications/Tailscale.app" ]; then
   else
     echo "Tailscale is already running."
   fi
-else
-  echo "Tailscale.app not found — skipping (install via Brewfile)."
 fi
 
 if [ ! -f "$HOME/.zshrc.local" ]; then

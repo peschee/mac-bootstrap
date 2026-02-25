@@ -22,6 +22,8 @@ brew "pnpm"
 brew "ripgrep"
 # Cross-shell prompt
 brew "starship"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale"
 # Text interface for Git repositories
 brew "tig"
 # Terminal multiplexer
