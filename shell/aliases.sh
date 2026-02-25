@@ -14,8 +14,9 @@ alias l="ls -AlFh -G"
 # Re-source zsh config
 alias resource="source ~/.zshrc"
 
-# System update
-alias update="sudo softwareupdate -i -a; brew update; brew upgrade; brew cleanup"
+# System update — 'update' checks for updates, 'upgrade' applies them
+alias update="sudo softwareupdate -i -a; brew update; brew outdated"
+alias upgrade="brew upgrade && brew cleanup"
 
 # Git-run log across repos — usage: grlog 30 (default: 14 days)
 grlog() {
