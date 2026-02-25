@@ -40,7 +40,7 @@ Agent guidance for this `mac-bootstrap` repo.
 ## Source-of-truth rules
 
 - Add/remove Homebrew apps in `Brewfile` (do not add one-off installs in `scripts/bootstrap.sh`).
-- Put shared aliases and shell functions in `shell/aliases.sh`.
+- Put shared aliases and shell functions in `shell/aliases.sh` (sourced by both zsh and bash — keep syntax POSIX-compatible).
 - Put shared shell initialization (tool init/env) in `shell/.zshrc`.
 - Keep machine-specific or secret values in `~/.zshrc.local` (generated from `shell/local.sh.example` if missing).
 - `scripts/bootstrap.sh` should orchestrate setup steps, not become the place for per-tool custom config.
