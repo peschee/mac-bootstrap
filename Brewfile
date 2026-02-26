@@ -10,12 +10,16 @@ brew "fzf-tab"
 brew "gemini-cli"
 # GitHub command-line tool
 brew "gh"
+# Kubernetes package manager
+brew "helm"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Java-based project management
 brew "maven"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Create, run, and share large language models (LLMs)
+brew "ollama"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # AI coding agent, built for the terminal
