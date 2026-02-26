@@ -26,6 +26,8 @@ brew "ripgrep"
 brew "opencode"
 # Fast, disk space efficient package manager
 brew "pnpm"
+# Safe, concurrent, practical language
+brew "rust"
 # Intuitive find & replace CLI
 brew "sd"
 # Cross-shell prompt for astronauts
