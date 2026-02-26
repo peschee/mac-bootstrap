@@ -4,7 +4,7 @@ brew "ack"
 brew "fnm"
 # Command-line fuzzy finder written in Go
 brew "fzf"
-# Replace zsh's default completion selection menu with fzf
+# Replace zsh completion selection menu with fzf
 brew "fzf-tab"
 # Interact with Google Gemini AI models from the command-line
 brew "gemini-cli"
@@ -12,18 +12,20 @@ brew "gemini-cli"
 brew "gh"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Java-based project management
+brew "maven"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
-# AI coding agent, built for the terminal
-brew "opencode"
-# Fast, disk space efficient package manager for Node.js
-brew "pnpm"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Cross-shell prompt
+# AI coding agent, built for the terminal
+brew "opencode"
+# Fast, disk space efficient package manager
+brew "pnpm"
+# Cross-shell prompt for astronauts
 brew "starship"
 # Easiest, most secure way to use WireGuard and 2FA
-brew "tailscale"
+brew "tailscale", restart_service: :changed
 # Text interface for Git repositories
 brew "tig"
 # Terminal multiplexer
