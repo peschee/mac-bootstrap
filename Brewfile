@@ -26,6 +26,8 @@ brew "ripgrep"
 brew "opencode"
 # Fast, disk space efficient package manager
 brew "pnpm"
+# Intuitive find & replace CLI
+brew "sd"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Easiest, most secure way to use WireGuard and 2FA

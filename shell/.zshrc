@@ -43,3 +43,8 @@ export PATH="$HOME/.local/bin:$PATH"
 
 [ -f "$HOME/.aliases.sh" ] && source "$HOME/.aliases.sh"
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/psiska/.cache/lm-studio/bin"
+# End of LM Studio CLI section
+
