@@ -12,6 +12,10 @@ brew "gemini-cli"
 brew "gh"
 # Kubernetes package manager
 brew "helm"
+# Kubernetes command-line tool
+brew "kubernetes-cli"
+# Switch between kubectl contexts and namespaces (includes kubens)
+brew "kubectx"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Java-based project management
