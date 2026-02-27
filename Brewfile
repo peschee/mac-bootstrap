@@ -18,6 +18,8 @@ brew "jq"
 brew "maven"
 # Polyglot runtime manager (asdf rust clone)
 brew "mise"
+# Simple tool to make locally trusted development certificates
+brew "mkcert"
 # Create, run, and share large language models (LLMs)
 brew "ollama"
 # Search tool like grep and The Silver Searcher
@@ -38,6 +40,8 @@ brew "tailscale", restart_service: :changed
 brew "tig"
 # Terminal multiplexer
 brew "tmux"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
 # Shell extension to navigate your filesystem faster
 brew "zoxide"
 # Fish-like fast/unobtrusive autosuggestions for zsh
